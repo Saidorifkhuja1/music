@@ -29,7 +29,7 @@ class SendVerificationCodeAPIView(APIView):
 
         email = data['email']
 
-        
+
         if User.objects.count() >= 3:
             return Response({"error": "Only 3 users can be registered."}, status=status.HTTP_403_FORBIDDEN)
 
